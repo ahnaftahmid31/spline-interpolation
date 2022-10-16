@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "name": "C++",
+            "intelliSenseMode": "${default}",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "gnu++14",
+            "includePath": [
+            ]
+        }
+    ],
+    "version": 4
+}
