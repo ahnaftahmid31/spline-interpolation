@@ -6,7 +6,6 @@ using namespace std;
 // mat is the 3n * 3n matrix, *x is the input x array,
 // *y is input y array, and n is the sizeof x-array
 void quad_spline_matrix(double **mat, double *x, double *y, int n) {
-  printf("In quad\n");
   int ix = 0;
   for (int i = 0; i < 2 * (n - 1); i += 2) {
     int j = (i / 2) * 3;
@@ -19,7 +18,6 @@ void quad_spline_matrix(double **mat, double *x, double *y, int n) {
     mat[i + 1][j + 1] = x[ix + 1];
     mat[i + 1][j + 2] = 1;
     mat[i + 1][3 * (n - 1)] = y[ix + 1];
-    printf("y[%d]: %lf y[%d]: %lf\n", ix, y[ix], ix + 1, y[ix + 1]);
     ix++;
   }
 

@@ -5,8 +5,8 @@
 #include "spline.hpp"
 using namespace std;
 
-#define Width 1440
-#define Height 900
+#define Width 1920
+#define Height 1080
 
 double quad_table_x[30005];
 double quad_table_y[30005];
@@ -39,23 +39,23 @@ static void display(void) {
   glEnd();
   glPopMatrix();
 
-  double xScale = 45;
-  double yScale = 15;
+  double xScale = 8;
+  double yScale = 8;
 
   // Quadratic (red color)
   glColor3ub(250, 20, 20);
-  glPointSize(1);
+  glPointSize(2);
   glPushMatrix();
   glBegin(GL_POINTS);
   for (int i = 0; i < quad_table_size; i++) {
-    glVertex2d(xScale * quad_table_x[i], yScale * quad_table_y[i] - Width / 8);
+    glVertex2d(xScale * quad_table_x[i], yScale * quad_table_y[i]);
   }
   glEnd();
   glPopMatrix();
 
   // Cubic (green color)
   glColor3ub(20, 250, 20);
-  glPointSize(1);
+  glPointSize(2);
   glPushMatrix();
   glBegin(GL_POINTS);
   for (int i = 0; i < cubic_table_size; i++) {
@@ -65,7 +65,7 @@ static void display(void) {
   glPopMatrix();
 
   // original x and y
-  glColor3ub(20, 220, 20);
+  glColor3ub(20, 100, 220);
   glPointSize(6);
   glPushMatrix();
   glBegin(GL_POINTS);

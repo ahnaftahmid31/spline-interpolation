@@ -4,5 +4,5 @@ Check out this blog for splines: [https://timodenk.com/blog/cubic-spline-interpo
 To compile, run this
 
 ```
-g++ matrix.cpp spline.cpp main.cpp -o app.out -lglut -lGL -lGLU && ./app.out < in.txt
+g++ matrix.cpp spline.cpp main.cpp -o app.out -lglut -lGL -lGLU && ./app.out < inputs/in.txt
 ```
